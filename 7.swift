@@ -1,24 +1,22 @@
 import Foundation
 
 let n = Int(readLine()!)!
-var exam = [String]()
+assert(n >= 0 && n <= 1000, "Out of range")
+var exam = Set<String>()
 
-if n != 0 {
-    for _ in 1...n {
-        exam.append(String(readLine()!))
-    }
+for _ in 1...n {
+    exam.insert(String(readLine()!))
 }
 
 let m = Int(readLine()!)!
-var res = [String]()
+assert(m >= 0 && m <= 1000, "Out of range")
+var invited = Set<String>()
 
-if m != 0 {
-    for _ in 1...m {
-        let student = String(readLine()!)
-        if !exam.contains(student) {
-            res.append(student)
-            print(student)
-        }
-    }
+for _ in 1...m {
+    invited.insert(String(readLine()!))
+}
+
+for person in invited.subtracting(exam) {
+    print(person)
 }
 

@@ -1,6 +1,7 @@
 import Foundation
 
 let flag = String(readLine()!)
+assert(["u", "l"].contains(flag), "Unsupported letter")
 let string = String(readLine()!)
 
 switch flag {
@@ -13,4 +14,3 @@ case "l":
 default:
     print("-")
 }
-

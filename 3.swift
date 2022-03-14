@@ -1,4 +1,7 @@
+import Foundation
 
+let n = Int(readLine()!)!
+assert(n >= 1 && n <= 92)
 
 func fibonacciRecursiveNum1(num1: Int, num2: Int, steps: Int) {
     print(num1)
@@ -9,4 +12,5 @@ func fibonacciRecursiveNum1(num1: Int, num2: Int, steps: Int) {
 }
 
 
-fibonacciRecursiveNum1(num1: 0, num2: 1, steps: Int(readLine()!)! - 1)
+fibonacciRecursiveNum1(num1: 0, num2: 1, steps: n - 1)
+
